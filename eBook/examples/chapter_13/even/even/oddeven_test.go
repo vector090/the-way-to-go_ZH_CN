@@ -2,8 +2,15 @@
 package even
 
 import "testing"
-	
+import "fmt"
+
 func TestEven(t *testing.T) {
+
+	// Comparnig ways to print during testing.
+	fmt.Println("This still get printed")
+	t.Log("Another way to print when testing")
+	println("This prints too, but quite untraceable")
+
 	if !Even(10) {
 		t.Log(" 10 must be even!")
 		t.Fail()
