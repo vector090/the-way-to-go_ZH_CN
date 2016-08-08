@@ -7,9 +7,9 @@ import "fmt"
 func TestEven(t *testing.T) {
 
 	// Comparnig ways to print during testing.
-	fmt.Println("This still get printed")
-	t.Log("Another way to print when testing")
-	println("This prints too, but quite untraceable")
+	fmt.Println("fmt.Println still get printed")
+	t.Log("Printed by t.Log, only appears in 'go test -v' ")
+	println("println prints too, but quite untraceable")
 
 	if !Even(10) {
 		t.Log(" 10 must be even!")
@@ -32,3 +32,4 @@ func TestOdd(t *testing.T) {
 		t.Fail()
 	}
 }
+
