@@ -12,7 +12,7 @@ type B struct {
 }
 
 func main() {
-	b := B{A{1, 2}, 3.0, 4.0}
+	b := B{A{ax: 1, ay: 2}, 3.0, 4.0}
 	fmt.Println(b.ax, b.ay, b.bx, b.by)
 	fmt.Println(b.A)
 }
