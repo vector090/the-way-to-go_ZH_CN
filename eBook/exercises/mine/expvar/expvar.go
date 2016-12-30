@@ -24,6 +24,8 @@ func main() {
 		time.Sleep(2 * time.Second)
 		//		time.Sleep(1e9)
 
+		//fmt.Printf("%#v", expvar)
+
 		memstatsFunc := expvar.Get("memstats").(expvar.Func)
 		memstats := memstatsFunc().(runtime.MemStats)
 		fmt.Println("Alloc", memstats.Alloc)

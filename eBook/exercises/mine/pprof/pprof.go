@@ -3,13 +3,16 @@ package main
 import "fmt"
 import "time"
 import "net/http"
-import _ "net/http/pprof"
+import pf "net/http/pprof"
 
 /*
 Test golang performance monitoring.
 See http://blog.ralch.com/tutorial/golang-performance-and-memory-analysis/
 */
 func main() {
+
+	// dummy code
+	println(pf.Handler)
 
 	go func() {
 		fmt.Println("starting")
