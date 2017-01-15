@@ -15,7 +15,7 @@ type Address struct {
 }
 
 type VCard struct {
-	FirstName	string
+	FirstName	string // fields must be public so as to be printed in json
 	LastName	string
 	Addresses	[]*Address
 	Remark		string
