@@ -16,11 +16,13 @@ func fibonacci(n int, c chan int) {
 
 func main() {
 	c := make(chan int, 10)
+	//c := make(chan int, 8)
 	go fibonacci(cap(c), c)
 	for i := range c {
 		fmt.Println(i)
 	}
 }
+
 /* Output:
 1
 1
